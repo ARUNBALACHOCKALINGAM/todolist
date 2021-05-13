@@ -1,0 +1,262 @@
+* {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #181824;
+  min-height: 100vh;
+  color: white;
+  transition: background 0.5s;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body.dark {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/bg-desktop-dark.jpg");
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+  transition: all 0.3s ease;
+}
+body.dark header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/bg-desktop-light.jpg");
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font-size: 2.375rem;
+  padding-right: 200px;
+  letter-spacing: 20px;
+}
+
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 10px;
+}
+
+form input,
+form button {
+  font-size: 18px;
+  border: none;
+  background: #25273c;
+  position: relative;
+  bottom: 130px;
+}
+form input {
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  color: white;
+  transition: all 0.3s ease;
+}
+form button {
+  background: #25273c;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 395px;
+  background: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark .fa-plus {
+  color: black;
+}
+.fa-plus {
+  color: white;
+  position: relative;
+  right: 3px;
+}
+
+body.dark form input {
+  background: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  background: hsl(235, 24%, 19%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 400px;
+  margin: auto;
+  color: white;
+  border-bottom: 1px white solid;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  position: relative;
+  right: 20px;
+  bottom: 150px;
+  transition: all 0.3s ease;
+}
+
+body.dark .todo {
+  background: white;
+  color: black;
+}
+.todo li {
+  flex: 1;
+}
+
+.complete-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+
+  left: 4px;
+  border: 0.5px hsl(234, 39%, 85%) solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cross-btn {
+  width: 20px;
+  height: 20px;
+  background: url("images/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #25273c;
+  display: block;
+  border: none;
+  position: relative;
+  right: 5px;
+  fill: white;
+  transition: 0.2s;
+}
+
+body.dark .cross-btn {
+  fill: #181824;
+  background-color: white;
+}
+.todo-item {
+  padding: 0rem 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.select {
+  height: 50px;
+  width: 400px;
+  margin-top: 0px;
+  padding-left: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #25273c;
+  border-radius: 0px 0px 10px 10px;
+  font-size: 0.875rem;
+  position: relative;
+  bottom: 165px;
+  transition: all 0.3s ease;
+}
+body.dark .select {
+  background: white;
+  color: black;
+}
+
+.leftover {
+  justify-content: space-evenly;
+  justify-content: center;
+  padding-right: 70px;
+  white-space: nowrap;
+}
+
+.all {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.active {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.complete {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.clear {
+  cursor: pointer;
+  padding-right: 50px;
+}
+
+.toggle {
+  position: absolute;
+  right: 480px;
+  top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.toggle::before {
+  content: url("images/icon-sun.svg");
+}
+
+body.dark .toggle::before {
+  content: url("images/icon-moon.svg");
+}
+
+@media screen and (max-width: 500px) {
+  .toggle {
+    position: absolute;
+    right: 50px;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
