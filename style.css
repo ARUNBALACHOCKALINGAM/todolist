@@ -46,7 +46,7 @@ body.dark header {
 
 h1 {
   font-size: 2.375rem;
-  padding-right: 200px;
+  padding-right: 180px;
   letter-spacing: 20px;
 }
 
@@ -228,9 +228,6 @@ body.dark .select {
 }
 
 .toggle {
-  position: absolute;
-  right: 480px;
-  top: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,17 +244,62 @@ body.dark .toggle::before {
   content: url("images/icon-moon.svg");
 }
 
-@media screen and (max-width: 500px) {
-  .toggle {
-    position: absolute;
-    right: 50px;
-    top: 130px;
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.5rem;
+    padding-right: 100px;
+  }
+
+  body.dark h1 {
+    font-size: 1.5rem;
+    padding-right: 100px;
+  }
+  header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    justify-content: center;
+    background-image: url("images/bg-mobile-dark.jpg");
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  body.dark header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  form {
+    width: 30%;
+    position: relative;
+    left: 140px;
+  }
+  form button {
+    position: relative;
+    right: 260px;
+  }
+
+  .todo-container {
+    width: 33%;
+  }
+
+  .todo {
+    width: 270px;
+    margin-left: 32px;
+  }
+  .select {
+    width: 270px;
+    font-size: 0.675rem;
+  }
+  .leftover {
+    display: none;
   }
 }
 
