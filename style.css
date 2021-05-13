@@ -260,3 +260,17 @@ body.dark .toggle::before {
     border-radius: 50%;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .toggle {
+    position: absolute;
+    right: 420px;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
