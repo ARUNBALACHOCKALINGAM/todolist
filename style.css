@@ -164,7 +164,7 @@ body.dark .todo {
   position: relative;
   right: 5px;
   fill: white;
-  transition: 0.2s;
+  transition: background 0.3s ease;
 }
 
 body.dark .cross-btn {
