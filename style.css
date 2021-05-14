@@ -275,7 +275,6 @@ body.dark .toggle::before {
     align-items: center;
     justify-content: center;
     background-image: url("images/bg-mobile-light.jpg");
-
     padding-top: 100px;
     padding-bottom: 100px;
   }
