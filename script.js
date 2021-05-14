@@ -7,7 +7,7 @@ const finished=document.getElementsByClassName('complete');
 const clear=document.getElementsByClassName('clear');
 
 todoButton.addEventListener('click',addTodo);
-todoButton.addEventListener('click',topDiv);
+
 
 todoList.addEventListener('click',deleteCheck);
 
@@ -47,9 +47,7 @@ function addTodo(event){
     }
 }
 
-function topDiv(){
-    console.log('hello');
-}
+
 
 
 
@@ -137,7 +135,7 @@ function displayUncompleted(){
     const todos=todoList.childNodes;
     todos.forEach(function(todo){
         if(todo.classList.contains('completed')){
-             todo.remove();
+              todo.remove();
         }
     })
 }
