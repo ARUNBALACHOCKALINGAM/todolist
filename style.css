@@ -286,13 +286,9 @@ body.dark .toggle::before {
     right: 260px;
   }
 
-  .todo-container {
-    width: 33%;
-  }
-
   .todo {
     width: 270px;
-    margin-left: 32px;
+    margin-left: 2px;
   }
   .select {
     width: 270px;
@@ -300,19 +296,5 @@ body.dark .toggle::before {
   }
   .leftover {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .toggle {
-    position: absolute;
-    right: 420px;
-    top: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
   }
 }
