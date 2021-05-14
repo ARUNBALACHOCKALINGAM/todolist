@@ -145,9 +145,6 @@ body.dark .todo {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  position: relative;
-
-  left: 4px;
   border: 0.5px hsl(234, 39%, 85%) solid;
   cursor: pointer;
   transition: all 0.3s ease;
