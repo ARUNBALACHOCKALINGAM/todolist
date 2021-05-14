@@ -5,17 +5,14 @@ const all=document.getElementsByClassName('all');
 const active=document.getElementsByClassName('active');
 const finished=document.getElementsByClassName('complete');
 const clear=document.getElementsByClassName('clear');
-
 todoButton.addEventListener('click',addTodo);
-
-
 todoList.addEventListener('click',deleteCheck);
-
 const container=document.querySelector('.container');
+const bottom=document.querySelector('.select');
 const toggle=document.querySelector('.toggle');
+bottom.style.visibility="hidden";
 toggle.addEventListener('click',changeModes);
 var count=0;
-
 function changeModes(){
     document.body.classList.toggle('dark');
     
@@ -36,9 +33,9 @@ function addTodo(event){
     todoDiv.appendChild(newToDO);
     const crossButton=document.createElement('button');
     crossButton.classList.add("cross-btn");
-    
     todoDiv.appendChild(crossButton);
     todoList.appendChild(todoDiv);
+    bottom.style.visibility="visible";
     count++;
     itemsleft.innerHTML=count;
     todoInput.value="";
