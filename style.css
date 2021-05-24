@@ -29,7 +29,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/bg-desktop-dark.jpg");
+  background-image: linear-gradient(90deg, purple, rgb(201, 6, 97));
   padding-top: 100px;
   padding-bottom: 100px;
   color: white;
@@ -40,7 +40,7 @@ body.dark header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/bg-desktop-light.jpg");
+  background-image: linear-gradient(90deg, rgb(7, 63, 82), skyblue);
   padding-top: 100px;
   padding-bottom: 100px;
 }
