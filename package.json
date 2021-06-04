@@ -4,10 +4,7 @@
   "main": "app.js",
   "scripts": {
     "watch": "nodemon db",
-<<<<<<< HEAD
     "start": "node db.js",
-=======
->>>>>>> 1208a13ab117b3b116fd447ce11911bcef08f90e
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,22 +14,14 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@sendgrid/mail": "^6.4.0",
-<<<<<<< HEAD
     "axios": "^0.21.1",
-=======
-    "axios": "^0.19.2",
->>>>>>> 1208a13ab117b3b116fd447ce11911bcef08f90e
     "babel-loader": "^8.0.6",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.0.0",
     "cors": "^2.8.5",
     "csurf": "^1.10.0",
-<<<<<<< HEAD
     "dompurify": "^2.2.9",
-=======
-    "dompurify": "^1.0.11",
->>>>>>> 1208a13ab117b3b116fd447ce11911bcef08f90e
     "dotenv": "^8.6.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
@@ -42,11 +31,7 @@
     "md5": "^2.3.0",
     "mongodb": "^3.6.8",
     "nodemon": "^1.19.4",
-<<<<<<< HEAD
     "sanitize-html": "^2.4.0",
-=======
-    "sanitize-html": "^2.3.2",
->>>>>>> 1208a13ab117b3b116fd447ce11911bcef08f90e
     "socket.io": "^2.2.0",
     "validator": "^11.1.0",
     "webpack": "^4.39.1",

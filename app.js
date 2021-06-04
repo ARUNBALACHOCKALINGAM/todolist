@@ -23,10 +23,6 @@ app.set('view engine', 'ejs')
 function passwordProtected(req, res, next) {
   res.set('WWW-Authenticate', 'Basic realm="Simple Todo App"')
   if (req.headers.authorization == "Basic YXJ1bjpBcnVuKjIwMDE=") {
-<<<<<<< HEAD
-
-=======
->>>>>>> 1208a13ab117b3b116fd447ce11911bcef08f90e
     next()
   } else {
     res.status(401).send("Authentication required")
