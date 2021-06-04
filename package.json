@@ -1,7 +1,7 @@
 {
   "name": "complex-app",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "db.js",
   "scripts": {
     "watch": "nodemon db",
     "start": "node db.js",
