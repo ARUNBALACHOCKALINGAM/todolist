@@ -33,16 +33,19 @@ app.use(passwordProtected)
 
 app.get('/', function(req,res){
      
+  req.session.user={fav:"random user"}
+   
   
-    db.collection('newtodo').find().toArray(function(err,items){
-        
+    
+  
+  db.collection('newtodo').find({user:req.session.id}).toArray(function(err,items){
 
         
         res.send(`<!DOCTYPE html>
         <html lang="en">
           <head>
             <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="viewport" content="width=device-width, user-scalable=no" />
             <!-- displays site properly based on user's device -->
         
             <link rel="stylesheet" href="style.css" />
@@ -102,13 +105,20 @@ app.get('/', function(req,res){
       
         
     })
+
+  
+
+
   
   
 })
 
 app.post('/createitem',function(req,res){
-    db.collection('newtodo').insertOne({text : req.body.text},function(err,info){
+    
+   
+    db.collection('newtodo').insertOne({user:req.session.id,text : req.body.text},function(err,info){
             res.json(info.ops[0])
+            
     })
 })
 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    
     "start": "node db.js",
+    "watch": "nodemon db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
     "babel-loader": "^8.0.6",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^3.0.0",
+    "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
     "csurf": "^1.10.0",
     "dompurify": "^2.2.9",

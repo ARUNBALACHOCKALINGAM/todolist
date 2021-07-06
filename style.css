@@ -242,58 +242,248 @@ body.dark .toggle::before {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    overflow: scroll;
-  }
-  h1 {
-    font-size: 1.5rem;
-    padding-right: 100px;
+  * {
+    font-size: 100%;
+    box-sizing: border-box;
   }
 
-  body.dark h1 {
-    font-size: 1.5rem;
-    padding-right: 100px;
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #181824;
+    min-height: 100vh;
+    color: white;
+    transition: background 0.5s;
+    overflow: hidden;
+    font-family: "Josefin Sans", sans-serif;
   }
+
+  body.dark {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: "Josefin Sans", sans-serif;
+    min-height: 100vh;
+  }
+
   header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("images/bg-mobile-dark.jpg");
-
+    background-image: linear-gradient(90deg, purple, rgb(201, 6, 97));
     padding-top: 100px;
     padding-bottom: 100px;
     color: white;
     transition: all 0.3s ease;
   }
-
   body.dark header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("images/bg-mobile-light.jpg");
+    background-image: linear-gradient(90deg, rgb(7, 63, 82), skyblue);
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  form {
-    width: 30%;
-    position: relative;
-    left: 140px;
+  h1 {
+    font-size: 1.375rem;
+    padding-right: 150px;
+    letter-spacing: 10px;
   }
-  form button {
+
+  form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    right: 260px;
+    left: 10px;
+  }
+
+  form input,
+  form button {
+    font-size: 12px;
+    border: none;
+    background: #25273c;
+    position: relative;
+    bottom: 130px;
+  }
+
+  form input {
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  form button {
+    background: #25273c;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 35px;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  body.dark .fa-plus {
+    color: black;
+  }
+  .fa-plus {
+    color: white;
+    position: relative;
+    right: 3px;
+  }
+
+  body.dark form input {
+    background: white;
+  }
+
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
   }
 
   .todo {
-    width: 270px;
-    margin-left: 2px;
+    background: hsl(235, 24%, 19%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+    margin: auto;
+    color: white;
+    border-bottom: 1px white solid;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    position: relative;
+    right: 20px;
+    bottom: 150px;
+    transition: all 0.3s ease;
   }
+
+  body.dark .todo {
+    background: white;
+    color: black;
+  }
+  .todo li {
+    flex: 1;
+  }
+
+  .complete-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 0.5px hsl(234, 39%, 85%) solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cross-btn {
+    width: 20px;
+    height: 20px;
+    background: url("images/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #25273c;
+    display: block;
+    border: none;
+    position: relative;
+    right: 5px;
+    fill: white;
+    transition: background 0.3s ease;
+  }
+
+  body.dark .cross-btn {
+    fill: #181824;
+    background-color: white;
+  }
+  .todo-item {
+    padding: 0rem 1rem;
+  }
+
+  .completed {
+    text-decoration: line-through;
+  }
+
   .select {
-    width: 270px;
+    height: 50px;
+    width: 300px;
+    margin-top: 0px;
+    padding-left: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #25273c;
+    border-radius: 0px 0px 10px 10px;
     font-size: 0.675rem;
+    position: relative;
+    bottom: 165px;
+    transition: all 0.3s ease;
   }
+  body.dark .select {
+    background: white;
+    color: black;
+  }
+
   .leftover {
-    display: none;
+    justify-content: space-evenly;
+    justify-content: center;
+    padding-right: 70px;
+    white-space: initial;
+  }
+
+  .all {
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .active {
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .complete {
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .clear {
+    cursor: pointer;
+    padding-right: 5px;
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .toggle::before {
+    content: url("images/icon-sun.svg");
+  }
+
+  body.dark .toggle::before {
+    content: url("images/icon-moon.svg");
   }
 }
