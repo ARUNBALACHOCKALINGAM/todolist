@@ -20,16 +20,6 @@ let sessionOptions = session({
 app.use(express.static(__dirname))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
-function passwordProtected(req, res, next) {
-  res.set('WWW-Authenticate', 'Basic realm="Simple Todo App"')
-  if (req.headers.authorization == "Basic YXJ1bjpBcnVuKjIwMDE=") {
-    next()
-  } else {
-    res.status(401).send("Authentication required")
-  }
-}
-
-app.use(passwordProtected)
 
 app.get('/', function(req,res){
      
